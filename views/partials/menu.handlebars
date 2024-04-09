@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <button id="carrito" type="button" class="btn m-auto" data-bs-toggle="modal" data-bs-target="#modalCarrito">
+        <i class="fa-solid fa-cart-shopping fa-2xl text-white "></i>
+    </button>
+</nav>
+<h1 class="text-center p-4 mt-4 ">Bienvenido al Mercado Web, seleccione sus productos.</h1>
+<script>
+    $('#carrito').click(function () {
+        let prod = '';
+        productos.forEach(productosCarrito => prod += `<div><img class="img-fluid w-25" src="/img/${productosCarrito}.png"><h5>${productosCarrito}</h5><hr></div>`);
+        $('#productos').html(prod);
+    });
+
+    $('#carrito').click(() => {
+        $(this).attr('src');
+    });
+</script>

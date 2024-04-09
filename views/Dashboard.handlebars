@@ -1,0 +1,21 @@
+{{> menu }}
+{{> main }}
+{{> modal }}
+<script>
+    let productos = [];
+
+    $('.producto').click(function (e) {
+        $(this)
+        let exist = productos.find(p => p === this.id);
+        if (!exist) {
+            productos.push(this.id);
+            console.log(productos);
+        }
+    });
+
+    $('.producto').dblclick(function () {
+        $(this)
+        productos = productos.filter(p => p !== this.id);
+        console.log(productos);
+    });
+</script>
